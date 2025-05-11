@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./assets/styles/style.scss"; // ✅scss
+
+// page
+import Main from "./pages/Main";
+
+// components
+import { Loader } from "./components";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // 예: 최소 2.5초 후 로딩 해제
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <BrowserRouter>
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <Main />
+        // <Routes>
+        //   <Route path="/" element={<Main />} />
+        // </Routes>
+      )}
+    </>
+    // </BrowserRouter>
   );
 }
 

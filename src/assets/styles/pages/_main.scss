@@ -1,0 +1,50 @@
+.main {
+}
+
+.section01,
+.section03 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rosybrown;
+  font-size: 80px;
+  font-weight: 700;
+  color: #fff;
+}
+.card-container {
+  //스크롤 트리거를 위한 래퍼로 세로 높이를 확보
+  height: 3996px; /* 가로 슬라이드 길이만큼 확보 */
+  max-width: 1328px;
+  margin: 0 auto;
+}
+.card-wrap {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+.card-list {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  // width: 3996px;
+  width: fit-content;
+  gap: 3.6rem;
+  &__img {
+    width: 300px;
+    height: 260px;
+    border-radius: 24px;
+    overflow: hidden;
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s ease-in-out;
+    }
+  }
+}

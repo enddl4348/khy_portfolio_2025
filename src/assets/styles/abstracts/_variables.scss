@@ -1,0 +1,80 @@
+$root-font-size: 10px;
+$root-font-size-minimum: 8px;
+
+// - font family
+$font-spoqa: 'SpoqaHanSansNeo';
+$font-ggothic: 'HGGGothicssi';
+$font-noto: 'NotoSansKR';
+$font-roboto: 'Roboto';
+
+// - font weight
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-bolder: 800;
+$font-weight-extrabold: 900;
+
+// - primary colors
+$color-primary: #0565f0;
+
+// - secondary colors
+$color-secondary-1: #f0f6ff;
+$color-secondary-2: #e5f1ff;
+$color-secondary-3: #c2dcff;
+$color-secondary-4: #5697f0;
+$color-secondary-5: #307ff0;
+$color-secondary-6: #175ec7;
+$color-secondary-7: #1d2d47;
+
+// - text colors
+$color-textblack: #222222;
+$color-text02: #555555;
+$color-text04: #767676;
+
+// - line colors
+$color-line04: #dddddd;
+
+// - gray colors
+$color-bg01: #eeeeee;
+
+// - white color
+$color-white: #ffffff;
+
+// - 시스템 colors
+$color-info: #0565f0;
+$color-success: #00a684;
+$color-fail: #fb594e;
+$color-E18700: #e18700;
+$color-neutrality: #8c959f;
+
+//- disabled color
+$color-disabled-1: #b0ccf6;
+$color-disabled-2: #8c959f;
+
+// - shadow color
+$shadow1: 0px 1px 6px 0px rgba(33, 37, 41, 0.04),
+  0px 1px 1px 0px rgba(33, 37, 41, 0.02);
+$shadow2: 0px 1px 16px 0px rgba(33, 37, 41, 0.04),
+  0px 6px 10px 0px rgba(33, 37, 41, 0.02);
+$shadow3: 0px 2px 22px -1px rgba(33, 37, 41, 0.04),
+  0px 8px 10px 0px rgba(33, 37, 41, 0.02);
+
+// - z-index
+$z-index: (
+  overlay-layer: 1030,
+  overlay-dimmed: 1020,
+  layer: 1010,
+  dimmed: 100,
+  tooltip: 50,
+  sticky: 50,
+  aside: 45,
+  header: 40,
+  navigation: 30,
+  footer: 20,
+  // triangle: 10,
+  teachingBubble: 5,
+  default: 1,
+  below: -1,
+) !default;

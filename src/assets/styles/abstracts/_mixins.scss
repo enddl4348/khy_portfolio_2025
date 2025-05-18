@@ -1,2 +1,5 @@
-@use 'abstracts/functions' as func;
-@use 'abstracts/variables' as var;
+@mixin font-style($size, $weight: 400, $spacing: normal) {
+  font-size: $size;
+  font-weight: $weight;
+  letter-spacing: $spacing;
+}

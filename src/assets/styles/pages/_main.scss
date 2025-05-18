@@ -1,50 +1,83 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+$visual: visual;
+
 .main {
 }
 
-.section01,
-.section03 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: rosybrown;
-  font-size: 80px;
-  font-weight: 700;
-  color: #fff;
-}
-.card-container {
-  //스크롤 트리거를 위한 래퍼로 세로 높이를 확보
-  height: 3996px; /* 가로 슬라이드 길이만큼 확보 */
-  max-width: 1328px;
-  margin: 0 auto;
-}
-.card-wrap {
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  overflow: hidden;
-}
-.card-list {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  // width: 3996px;
-  width: fit-content;
-  gap: 3.6rem;
-  &__img {
-    width: 300px;
-    height: 260px;
-    border-radius: 24px;
+.#{$visual} {
+  position: relative;
+  height: 300vh;
+  background-color: var.$color-black;
+  &__wrap {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var.$color-black;
     overflow: hidden;
-    &:hover {
-      img {
-        transform: scale(1.2);
-      }
+  }
+  &__circle-box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &__circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(100%, 30rem);
+    height: min(100%, 30rem);
+    border-radius: 50%;
+    background: linear-gradient(#0988ff, #005bd2);
+  }
+  &__text {
+    color: var.$color-white;
+    z-index: 1;
+    & {
+      @include mix.font-style(7rem, 700, -0.02em);
     }
-    img {
-      height: 100%;
-      object-fit: cover;
-      transition: 0.5s ease-in-out;
+    &--01,
+    &--02 {
+      position: absolute;
     }
+  }
+  &__gate {
+    position: relative;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 100%;
+    z-index: 2;
+  }
+  &__gate-item {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    background-color: var.$color-black;
+    &--right {
+      justify-content: flex-start;
+      padding-left: 3rem;
+    }
+  }
+  &__gate--line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(#0988ff, #005bd2);
+    opacity: 0.1;
+    will-change: transform;
   }
 }

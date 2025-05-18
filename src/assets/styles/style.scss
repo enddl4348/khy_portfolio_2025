@@ -1,15 +1,13 @@
 @charset "UTF-8";
 
 // base
+@use "base/reset";
+@use "base/common";
+// @use "base/fonts";
+@use "base/utility";
 
-// base
-@import 'base/reset';
-@import 'base/common';
-// @import "base/fonts";
-// @import "base/utility";
+// page
+@use "pages/main";
 
 // component
 // library
-
-// page
-@import 'pages/main';

@@ -21,18 +21,13 @@ function App() {
   }, []);
 
   return (
-    // <BrowserRouter>
     <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <Main />
-        // <Routes>
-        //   <Route path="/" element={<Main />} />
-        // </Routes>
-      )}
+      {/* {loading ? ( */}
+      {/* <Loader /> */}
+      {/* ) : ( */}
+      <Main />
+      {/* )} */}
     </>
-    // </BrowserRouter>
   );
 }
 

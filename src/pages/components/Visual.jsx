@@ -24,7 +24,7 @@ export default function Visual() {
       {
         target: `.${visual}__gate--line`,
         from: { yPercent: -100, opacity: 0.1 },
-        to: { yPercent: 0, opacity: 0.6, duration: 0.6 },
+        to: { yPercent: 0, opacity: 0.8, duration: 0.6 },
         position: 0,
       },
       {
@@ -60,20 +60,20 @@ export default function Visual() {
       {
         target: `.${visual}__text--01`,
         from: { opacity: 1 },
-        to: { opacity: 0, duration: 0.3, ease: "sine.in" },
-        position: 2.6, // 텍스트 유지 시간 확보
+        to: { opacity: 0, duration: 0.6, ease: "sine.in" },
+        position: 2.2, // 텍스트 유지 시간 확보
       },
       {
         target: `.${visual}__text--02`,
         from: { opacity: 0 },
-        to: { opacity: 1, duration: 0.6, ease: "sine.out" },
-        position: 2.6,
+        to: { opacity: 1, duration: 1, ease: "sine.out" },
+        position: 2.5,
       },
     ],
   });
 
   return (
-    <div className={visual} ref={sectionRef}>
+    <section className={visual} ref={sectionRef}>
       <div className={`${visual}__wrap`}>
         <div className={`${visual}__circle-box`}>
           <div className={`${visual}__circle`}></div>
@@ -94,6 +94,6 @@ export default function Visual() {
           <div className={`${visual}__gate--line`}></div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

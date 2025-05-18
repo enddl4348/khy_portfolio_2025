@@ -1,14 +1,15 @@
 @use "../abstracts/variables" as var;
 @use "../abstracts/mixins" as mix;
 
-$visual: visual;
-
 .main {
 }
 
+// visual
+$visual: visual;
+
 .#{$visual} {
   position: relative;
-  height: 300vh;
+  height: 350vh;
   background-color: var.$color-black;
   &__wrap {
     position: sticky;
@@ -43,11 +44,14 @@ $visual: visual;
     color: var.$color-white;
     z-index: 1;
     & {
-      @include mix.font-style(7rem, 700, -0.02em);
+      @include mix.font-style(8rem, 700, -0.02em);
     }
     &--01,
     &--02 {
       position: absolute;
+    }
+    em {
+      font-weight: 800;
     }
   }
   &__gate {
@@ -79,5 +83,133 @@ $visual: visual;
     background: linear-gradient(#0988ff, #005bd2);
     opacity: 0.1;
     will-change: transform;
+  }
+}
+
+// section2 (skills)
+$skill: skill;
+
+.#{$skill} {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__marquee {
+    max-width: 132.8rem;
+    overflow-x: hidden;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__list-item {
+    width: 20rem;
+    height: 20rem;
+    margin-right: 2.4rem;
+    background-color: var.$color-white;
+    border-radius: 2rem;
+  }
+  &__card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__card-img {
+    height: 8rem;
+    margin-bottom: 2rem;
+    img {
+      height: 100%;
+    }
+  }
+  &__card-text {
+    color: var.$color-black;
+    & {
+      @include mix.font-style(2rem, 600, -0.02em);
+    }
+  }
+}
+
+// section5 (contact)
+$contact: contact;
+
+.#{$contact} {
+  &__wrap {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  .divider {
+    flex-basis: 100%;
+  }
+  &__content {
+    flex-basis: 50%;
+    color: var.$color-white;
+  }
+  &__desc {
+    line-height: 3.6rem;
+    & {
+      @include mix.font-style(2rem, 500, -0.02em);
+    }
+  }
+  &__info {
+    margin-top: 5.4rem;
+    border-top: 1px solid rgba(#ffffff, 0.6);
+  }
+  &__info-item {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.4rem;
+    & {
+      @include mix.font-style(2rem, 500, -0.02em);
+    }
+  }
+  &__info-title {
+    font-weight: 700;
+  }
+  &__info-text {
+    color: rgba(#ffffff, 0.8);
+  }
+  &__link {
+    display: flex;
+    gap: 4.4rem;
+    margin-top: 5.2rem;
+  }
+  &__link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-basis: 100%;
+    height: 7.2rem;
+    padding: 0 2.4rem;
+    border: 1px solid rgba(#ffffff, 0.4);
+    border-radius: 0.8rem;
+    transition: all 0.4s;
+    & {
+      @include mix.font-style(2rem, 600, -0.02em);
+    }
+    &:hover {
+      background-color: var.$color-white;
+      color: var.$color-black;
+      .#{$contact}__link-icon--git {
+        background-image: url("../../img/icon_git_active.svg");
+      }
+      .#{$contact}__link-icon--notion {
+        background-image: url("../../img/icon_notion_active.svg");
+      }
+    }
+  }
+  &__link-icon {
+    width: 2rem;
+    height: 2rem;
+    background: no-repeat 50%;
+    background-size: 100% auto;
+    &--git {
+      background-image: url("../../img/icon_git.svg");
+    }
+    &--notion {
+      width: 3.6rem;
+      background-image: url("../../img/icon_notion.svg");
+    }
   }
 }

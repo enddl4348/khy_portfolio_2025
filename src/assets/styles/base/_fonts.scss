@@ -1,89 +1,70 @@
 /* fonts */
-//NotoSans
+//Pretendard
 
-//regular
-@font-face {
-    font-family: 'NotoSansKR';
-    font-style: normal;
-    font-weight: 400;
-    src:
-        local(''),
-        url('/font/noto-sans-kr-v13-latin_korean-regular.woff2') format('woff2'),
-        /* Super Modern Browsers */
-            url('/font/noto-sans-kr-v13-latin_korean-regular.woff')
-            format('woff'),
-        /* Modern Browsers */
-            url('/font/noto-sans-kr-v13-latin_korean-regular.ttf')
-            format('truetype'),
-        /* Safari, Android, iOS */
-            url('/font/noto-sans-kr-v13-latin_korean-regular.svg#NotoSansKR')
-            format('svg');
-    /* Legacy iOS */
-}
+$fontSrc: "../../font";
 
-//medium
+//Pretendard
 @font-face {
-    font-family: 'NotoSansKR';
-    font-style: normal;
-    font-weight: 500;
-    src:
-        local(''),
-        url('/font/noto-sans-kr-v13-latin_korean-500.woff2') format('woff2'),
-        /* Super Modern Browsers */
-            url('/font/noto-sans-kr-v13-latin_korean-500.woff') format('woff'),
-        /* Modern Browsers */ url('/font/noto-sans-kr-v13-latin_korean-500.ttf')
-            format('truetype'),
-        /* Safari, Android, iOS */
-            url('/font/noto-sans-kr-v13-latin_korean-500.svg#NotoSansKR')
-            format('svg');
-    /* Legacy iOS */
-}
-
-//bold
-@font-face {
-    font-family: 'NotoSansKR';
-    font-style: normal;
-    font-weight: 700;
-    src:
-        local(''),
-        url('/font/noto-sans-kr-v13-latin_korean-700.woff2') format('woff2'),
-        /* Super Modern Browsers */
-            url('/font/noto-sans-kr-v13-latin_korean-700.woff') format('woff'),
-        /* Modern Browsers */ url('/font/noto-sans-kr-v13-latin_korean-700.ttf')
-            format('truetype'),
-        /* Safari, Android, iOS */
-            url('/font/noto-sans-kr-v13-latin_korean-700.svg#NotoSansKR')
-            format('svg');
-    /* Legacy iOS */
-}
-
-//Roboto
-@font-face {
-    font-family: 'Roboto';
-    src:
-        url('/font/Roboto-Regular-webfont.woff') format('woff'),
-        url('/font/Roboto-Regular-webfont.ttf') format('truetype'),
-        url('/font/Roboto-Regular-webfont.svg#robotoregular') format('svg');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"),
+    url(#{$fontSrc}/Pretendard-Bold.woff2) format("woff2");
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src:
-        url('/font/Roboto-Medium-webfont.woff') format('woff'),
-        url('/font/Roboto-Medium-webfont.ttf') format('truetype'),
-        url('/font/Roboto-Medium-webfont.svg#robotoregular') format('svg');
-    font-weight: 500;
-    font-style: normal;
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SenmiBold"),
+    url(#{$fontSrc}/Pretendard-SemiBold.woff2) format("woff2");
 }
 
 @font-face {
-    font-family: 'Roboto';
-    src:
-        url('/font/Roboto-Bold-webfont.woff') format('woff'),
-        url('/font/Roboto-Bold-webfont.ttf') format('truetype'),
-        url('/font/Roboto-Bold-webfont.svg#robotoregular') format('svg');
-    font-weight: 700;
-    font-style: normal;
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"),
+    url(#{$fontSrc}/Pretendard-Medium.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"),
+    url(#{$fontSrc}/Pretendard-Regular.woff2) format("woff2");
+}
+
+//Poppins
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Poppins Bold"),
+    url(#{$fontSrc}/poppins-bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Poppins SenmiBold"),
+    url(#{$fontSrc}/poppins-semibold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Poppins Medium"),
+    url(#{$fontSrc}/poppins-medium.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Poppins Regular"),
+    url(#{$fontSrc}/poppins-regular.woff2) format("woff2");
 }

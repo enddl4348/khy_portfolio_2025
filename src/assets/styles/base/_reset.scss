@@ -57,11 +57,12 @@ html {
 
 body {
   font-size: 1rem;
-  font-family: 'malgun', 'Apple SD Gothic Neo', '돋움', Dotum;
+  font-family: "Poppins", "Pretendard", "돋움", Dotum;
   line-height: 1;
   letter-spacing: -0.05em;
   background: #fff;
   color: #212529;
+  word-break: keep-all;
 }
 
 li {

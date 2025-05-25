@@ -1,79 +1,154 @@
-import React, { useRef, useState } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import React, { useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 // img
-const Img01 = "/img/cardimg_01.jpg";
-const Img02 = "/img/cardimg_02.jpg";
-const Img03 = "/img/cardimg_03.jpg";
-const Img04 = "/img/cardimg_04.jpg";
-const Img05 = "/img/cardimg_05.jpg";
-const Img06 = "/img/cardimg_06.jpg";
-const Img07 = "/img/cardimg_07.jpg";
-const Img08 = "/img/cardimg_08.jpg";
+import Project_Img_01 from "../../assets/img/project_01.jpg";
+import Project_Img_02 from "../../assets/img/project_02.jpg";
+import Project_Img_03 from "../../assets/img/project_03.jpg";
+import Project_Img_04 from "../../assets/img/project_04.jpg";
+import Project_Img_05 from "../../assets/img/project_05.jpg";
+import Project_Img_06 from "../../assets/img/project_06.jpg";
 
-const imageCard = [
-  Img01,
-  Img02,
-  Img03,
-  Img04,
-  Img05,
-  Img06,
-  Img07,
-  Img08,
-  Img01,
-  Img02,
-  Img03,
-  Img04,
+gsap.registerPlugin(ScrollTrigger);
+
+const projectData = [
+  {
+    title: "롯데월드 차세대 시스템 - 디지털 채널 부문 구축",
+    img: Project_Img_01,
+    period: "2024.11.12 ~ 2025.06.13(약 8개월 : 프로젝트 진행중)​",
+    role: "반응형 웹/앱 UI 개발, 재사용 컴포넌트 제작, 앱 메인, 롯데월드 민속박물관 메인 담당​",
+    environment: "React, SCSS, Framer Motion, Git, 반응형​",
+  },
+  {
+    title: "SK T-world 리뉴얼",
+    img: Project_Img_02,
+    period: "2022.05.02 ~ 2023.07.14​​",
+    role: "검색 전체 UI 구현, 매장 찾기 페이지 터치 스크린 모션 구현(mobile, pc, app)​",
+    environment: "Vanilla JS, SCSS, Git, Gulp​​​",
+  },
+  {
+    title: "NH 멤버스 접근성 개선 프로젝트​",
+    img: Project_Img_03,
+    period: "2024.03.14 ~ 2024.07.31​",
+    role: "접근성 준수 앱 제작​, app 메인 일부 담당, 서브 페이지 퍼블리싱​​",
+    environment: "Vanilla JS, SCSS, GSAP, Lottie Animation, Git​​",
+  },
+  {
+    title: "신한은행 기업뱅킹 재구축​",
+    img: Project_Img_04,
+    period: "2022.02.23 ~ 2022.04.30​(지원)",
+    role: "웹 접근성 준수 및 웹 표준 적용, 웹스퀘어(WebSquare) 사용​​",
+    environment: "웹스퀘어(Websquare), SVN​​",
+  },
+  {
+    title: "부산은행 장애인 차별 금지법 웹접근성 프로젝트",
+    img: Project_Img_05,
+    period: "2023.09.04 ~ 2024.02.29​​",
+    role: "웹 접근성 인증 마크 획득을 위한 UI 개선​​​",
+    environment: " SVN, JSP, ​​HTML, CSS, jQuery",
+  },
+  {
+    title: "InBody 베트남 웹사이트 구축",
+    img: Project_Img_06,
+    period: "2024.09.23 ~ 2024.10.25​",
+    role: "웹 퍼블리싱 전반(개인 프로젝트)​​​",
+    environment: "반응형, Gulp, Pug, SCSS, jQuery, GSAP, Git​",
+    link: "https://inbodyvietnam.com/en",
+  },
 ];
-console.log(imageCard);
 
-function ImageCard({ img }) {
-  return (
-    <div className="card-list__img">
-      <img src={img} alt="" />
-    </div>
-  );
-}
+const project = "project";
 
 export default function Section3() {
-  const containerRef = useRef(null);
+  const sectionRef = useRef(null);
+  const listRef = useRef(null);
 
-  // 전체 스크롤 진행도 가져오기
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
+  useGSAP(
+    () => {
+      if (!sectionRef.current || !listRef.current) return;
 
-  // 스크롤 진행도 → x축 이동 값으로 변환
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-2668px"]); //-2668px: (전체 card 너비) - 1328(가운데 container 너비)
+      const totalWidth = listRef.current.scrollWidth;
+      const visibleWidth = window.innerWidth;
 
-  // 부드럽게 애니메이션 처리
-  const smoothX = useSpring(x, {
-    stiffness: 160,
-    damping: 30,
-    restDelta: 0.001,
-  });
+      const xPercent = ((visibleWidth - totalWidth) / totalWidth) * 100;
+
+      gsap.to(listRef.current, {
+        xPercent,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=250%",
+          scrub: 1,
+          pin: sectionRef.current.querySelector(".project__wrap"),
+          pinSpacing: false,
+          markers: false,
+        },
+      });
+    },
+    { scope: sectionRef }
+  ); //  useGSAP에서 scope로 sectionRef 지정
 
   return (
-    <div className="main">
-      <section className="section01">SECTION 01</section>
-
-      <section className="section02 card-container" ref={containerRef}>
-        <div className="card-wrap">
-          <motion.div
-            className="card-list"
-            style={{
-              x: smoothX,
-            }}
-          >
-            {imageCard.map((item, index) => (
-              <ImageCard key={index} img={item} />
-            ))}
-          </motion.div>
+    <section className={`section ${project}`} ref={sectionRef}>
+      <div className={`${project}__wrap`}>
+        <div className={`${project}__list`} ref={listRef}>
+          <div className={`${project}__item ${project}-title`}>
+            <div className="section-title-box">
+              <h2 className="section-title">PROJECT</h2>
+              <p className="section-sub">
+                실제 클라이언트 및 팀 프로젝트에 참여한 작업들입니다.
+              </p>
+            </div>
+          </div>
+          {projectData.map((item, index) => (
+            <div key={index} className={`${project}__item`}>
+              <div className={`${project}-card ${project}-card--0${index + 1}`}>
+                <div className={`${project}-card__img`}>
+                  <img src={item.img} alt="" />
+                  <div className={`${project}-card__hover`}>
+                    <div className={`${project}-card__detail`}>
+                      <div className={`${project}-card__detail-item`}>
+                        <span className={`${project}-card__detail-title`}>
+                          역할
+                        </span>
+                        <div className={`${project}-card__detail-text`}>
+                          {item.role}
+                        </div>
+                      </div>
+                      <div className={`${project}-card__detail-item`}>
+                        <span className={`${project}-card__detail-title`}>
+                          작업환경
+                        </span>
+                        <div className={`${project}-card__detail-text`}>
+                          {item.environment}
+                        </div>
+                        {item.link && (
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            className={`${project}-card__link`}
+                          >
+                            View
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className={`${project}-card__content`}>
+                  <strong className={`${project}-card__title`}>
+                    {item.title}
+                  </strong>
+                  <div className={`${project}-card__period`}>{item.period}</div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
-
-      <section className="section03">SECTION 03</section>
-    </div>
+      </div>
+    </section>
   );
 }

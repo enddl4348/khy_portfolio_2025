@@ -60,10 +60,10 @@ export default function Section2() {
 
   return (
     <section className={`section ${skill}`}>
-      <div className={`${skill}__marquee`} ref={sectionRef}>
+      <div className={`${skill}__marquee inner`} ref={sectionRef}>
         <Marquee
           pauseOnHover={true} // 마우스 오버 시 자동 정지
-          speed={50}
+          speed={80}
           gradient={false}
           play={isVisible} // ✅ 뷰포트 안에 있을 때만 실행
         >

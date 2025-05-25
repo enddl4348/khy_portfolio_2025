@@ -22,12 +22,12 @@
 
 .inner {
   margin: 0 auto;
-  max-width: 132.8rem;
+  max-width: 84vw;
 }
 
 .section {
   height: 100vh;
-  background: var.$color-black;
+  background: #121212;
 }
 
 .section-title {
@@ -44,6 +44,15 @@
     width: 8rem;
     height: 2px;
     background-color: #077ff6;
+  }
+}
+
+.section-sub {
+  position: relative;
+  margin-top: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  & {
+    @include mix.font-style(2rem, 400, -0.02em);
   }
 }
 

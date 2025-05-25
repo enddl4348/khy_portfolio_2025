@@ -31,18 +31,22 @@ export default function Section5() {
                 </div>
               </div>
               <div className={`${contact}__link`}>
-                <a href="" className={`${contact}__link-item`}>
+                <a
+                  className={`${contact}__link-item`}
+                  href="https://github.com/enddl4348/khy_portfolio_2025"
+                  target="_blank"
+                >
                   <i
                     className={`${contact}__link-icon ${contact}__link-icon--git`}
                   ></i>
                   Github
                 </a>
-                <a href="" className={`${contact}__link-item`}>
+                {/* <a href="#" className={`${contact}__link-item`}>
                   <i
                     className={`${contact}__link-icon ${contact}__link-icon--notion`}
                   ></i>
                   Notion
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

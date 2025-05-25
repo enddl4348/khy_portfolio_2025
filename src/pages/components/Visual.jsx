@@ -23,19 +23,19 @@ export default function Visual() {
     animations: [
       {
         target: `.${visual}__gate-item--left .${visual}__text--mask`,
-        to: { width: "100%", duration: 0.5 },
+        to: { width: "100%", duration: 0.8 },
         position: 0,
       },
       {
         target: `.${visual}__gate-item--right .${visual}__text--mask`,
-        to: { width: "100%", duration: 0.5 },
-        position: 0.6,
+        to: { width: "100%", duration: 0.8 },
+        position: 0.8,
       },
       {
         target: `.${visual}__gate--line`,
         from: { yPercent: -100, opacity: 0.1 },
         to: { yPercent: 0, opacity: 0.8, duration: 1 },
-        position: 1.2,
+        position: 1,
       },
       {
         target: `.${visual}__gate-item--left`,
@@ -52,14 +52,14 @@ export default function Visual() {
       {
         target: `.${visual}__gate--line`,
         from: { opacity: 0.8 },
-        to: { opacity: 0, duration: 0.3 },
-        position: 2.2, // 너무 급하게 사라지지 않게
+        to: { opacity: 0, duration: 0.2 },
+        position: 2, // 너무 급하게 사라지지 않게
       },
       {
         target: `.${visual}__circle `,
         from: { scale: 15, opacity: 0 },
         to: { scale: 1, opacity: 1, duration: 1.5, ease: "power2.out" },
-        position: 2.2,
+        position: 2,
       },
       {
         target: `.${visual}__text--01`,

@@ -60,3 +60,24 @@
   display: flex;
   justify-content: space-between;
 }
+
+// header
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  &__inner {
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    padding: 0 3vw;
+  }
+  &__logo {
+    width: 14rem;
+  }
+  &__logo-link {
+    display: block;
+    width: 100%;
+  }
+}

@@ -16,18 +16,18 @@ import Skill_Img_11 from "../../assets/img/logo_figma.svg";
 import Skill_Img_12 from "../../assets/img/logo_zeplin.svg";
 
 const skillsData = [
-  { title: "React", img: Skill_Img_01 },
-  { title: "Javascript", img: Skill_Img_02 },
-  { title: "jQuery", img: Skill_Img_03 },
-  { title: "Html5", img: Skill_Img_04 },
-  { title: "Pug", img: Skill_Img_05 },
-  { title: "Scss", img: Skill_Img_06 },
-  { title: "GSAP", img: Skill_Img_07 },
-  { title: "Framer Motion", img: Skill_Img_08 },
-  { title: "Gulp", img: Skill_Img_09 },
-  { title: "Git ", img: Skill_Img_10 },
-  { title: "Figma", img: Skill_Img_11 },
-  { title: "Zeplin", img: Skill_Img_12 },
+  { title: "React", img: Skill_Img_01, percent: 70 },
+  { title: "Javascript", img: Skill_Img_02, percent: 80 },
+  { title: "jQuery", img: Skill_Img_03, percent: 80 },
+  { title: "Html5", img: Skill_Img_04, percent: 95 },
+  { title: "Pug", img: Skill_Img_05, percent: 85 },
+  { title: "Scss", img: Skill_Img_06, percent: 95 },
+  { title: "GSAP", img: Skill_Img_07, percent: 80 },
+  { title: "Framer Motion", img: Skill_Img_08, percent: 80 },
+  { title: "Gulp", img: Skill_Img_09, percent: 75 },
+  { title: "Git ", img: Skill_Img_10, percent: 90 },
+  { title: "Figma", img: Skill_Img_11, percent: 90 },
+  { title: "Zeplin", img: Skill_Img_12, percent: 90 },
 ];
 
 const skill = "skill";
@@ -75,6 +75,15 @@ export default function Section2() {
                     <img src={item.img} alt="" />
                   </div>
                   <span className={`${skill}__card-text`}>{item.title}</span>
+                </div>
+                <div className={`${skill}__hover-contents`}>
+                  <div class="bar">
+                    <div
+                      class="fill"
+                      style={{ "--percent": `${item.percent}` }}
+                    ></div>
+                  </div>
+                  <div className={`${skill}__number`}>{item.percent}%</div>
                 </div>
               </li>
             ))}

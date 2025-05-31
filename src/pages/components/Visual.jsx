@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
 import useScrollAnimation from "../../hooks/useScrollAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -15,7 +14,7 @@ export default function Visual() {
     scrollTrigger: {
       trigger: sectionRef.current,
       start: "top top",
-      end: "+=300%", // 조금 더 여유 있게
+      end: "+=300%",
       scrub: 1,
       pin: true,
       markers: false,
@@ -41,7 +40,7 @@ export default function Visual() {
         target: `.${visual}__gate-item--left`,
         from: { xPercent: 0 },
         to: { xPercent: -100, duration: 2, ease: "power2.out" },
-        position: 2, // 좀 더 부드럽게 이어지게
+        position: 2,
       },
       {
         target: `.${visual}__gate-item--right`,
@@ -53,12 +52,12 @@ export default function Visual() {
         target: `.${visual}__gate--line`,
         from: { opacity: 0.8 },
         to: { opacity: 0, duration: 0.2 },
-        position: 2, // 너무 급하게 사라지지 않게
+        position: 2,
       },
       {
         target: `.${visual}__circle `,
         from: { scale: 15, opacity: 0 },
-        to: { scale: 1, opacity: 1, duration: 1.5, ease: "power2.out" },
+        to: { scale: 1, opacity: 1, duration: 1.8, ease: "power2.out" },
         position: 2,
       },
       {
@@ -69,20 +68,20 @@ export default function Visual() {
       },
       {
         target: `.${visual}__text--01 .${visual}__text--mask`,
-        to: { width: "100%", duration: 0.5 },
-        position: 2.4,
+        to: { width: "100%", duration: 0.8 },
+        position: 2.6,
       },
       {
         target: `.${visual}__text--01`,
         from: { opacity: 1 },
-        to: { opacity: 0, duration: 0.6, ease: "power2.out" },
-        position: 3.2, // 텍스트 유지 시간 확보
+        to: { opacity: 0, duration: 0.4, ease: "power2.out" },
+        position: 3.6,
       },
       {
         target: `.${visual}__text--02`,
         from: { opacity: 0 },
         to: { opacity: 1, duration: 2, ease: "power2.out" },
-        position: 4.2,
+        position: 4,
       },
       {
         target: `.${visual}__circle-mark`,
@@ -92,17 +91,17 @@ export default function Visual() {
       },
       {
         target: `.${visual}__text--02 .${visual}__text--mask`,
-        to: { width: "100%", duration: 1.2, ease: "power2.out" },
-        position: 5,
+        to: { width: "100%", duration: 0.8, ease: "power2.out" },
+        position: 4.8,
       },
       {
         target: `.${visual}__circle-mark`,
         to: {
           opacity: 0,
-          duration: 3, // 좀 더 부드럽게
+          duration: 3,
           ease: "sine.inOut",
         },
-        position: 7,
+        position: 6.4,
       },
     ],
   });

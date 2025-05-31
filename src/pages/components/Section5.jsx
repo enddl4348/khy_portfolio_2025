@@ -1,8 +1,5 @@
 import React from "react";
 
-// img
-import Skill_Img_01 from "../../assets/img/logo_react.svg";
-
 const contact = "contact";
 
 export default function Section5() {
@@ -14,7 +11,8 @@ export default function Section5() {
             <h2 className="section-title">CONTACT</h2>
             <div className={`${contact}__content`}>
               <div className={`${contact}__desc`}>
-                아래 이메일이나 번호로 연락주시면 감사하겠습니다.
+                포트폴리오에 관심 가져주셔서 감사합니다. <br />
+                문의는 아래 이메일이나 번호로 부탁드립니다 :)
               </div>
               <div className={`${contact}__info`}>
                 <div className={`${contact}__info-item`}>

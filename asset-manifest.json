@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/khy_portfolio_2025/static/css/main.75613282.css",
-    "main.js": "/khy_portfolio_2025/static/js/main.86871a4a.js",
+    "main.css": "/khy_portfolio_2025/static/css/main.a6fa23d2.css",
+    "main.js": "/khy_portfolio_2025/static/js/main.ffc250c3.js",
     "static/js/453.bc85f8ef.chunk.js": "/khy_portfolio_2025/static/js/453.bc85f8ef.chunk.js",
     "static/media/img_about_bg.jpg": "/khy_portfolio_2025/static/media/img_about_bg.df54afda634b26f3680e.jpg",
     "static/media/logo_js.svg": "/khy_portfolio_2025/static/media/logo_js.5b07fb896a6838a8947be027f7e17188.svg",
@@ -30,6 +30,7 @@
     "static/media/js_guide.png": "/khy_portfolio_2025/static/media/js_guide.94c73a058f37f549f24c.png",
     "static/media/logo_jquery.svg": "/khy_portfolio_2025/static/media/logo_jquery.239f0ca3ce955098262d9573283ee8d3.svg",
     "static/media/logo_git.svg": "/khy_portfolio_2025/static/media/logo_git.cb58f20218e9007d9570e94aae139a15.svg",
+    "static/media/my-budget.png": "/khy_portfolio_2025/static/media/my-budget.b5e3df05044933cc79e7.png",
     "static/media/logo_figma.svg": "/khy_portfolio_2025/static/media/logo_figma.a9949434210d5a3eccbabcdbd9ae3168.svg",
     "static/media/logo_zeplin.svg": "/khy_portfolio_2025/static/media/logo_zeplin.dd73965ea8d510733658df367b0e99f7.svg",
     "static/media/logo_pug.svg": "/khy_portfolio_2025/static/media/logo_pug.c54f8408454ccd41d14e8f8cdeca5fa6.svg",
@@ -43,12 +44,12 @@
     "index.html": "/khy_portfolio_2025/index.html",
     "static/media/visual_circle_02.svg": "/khy_portfolio_2025/static/media/visual_circle_02.59ea60294461cfd76f09.svg",
     "static/media/visual_circle_01.svg": "/khy_portfolio_2025/static/media/visual_circle_01.594fa918dc2a8734e41e.svg",
-    "main.75613282.css.map": "/khy_portfolio_2025/static/css/main.75613282.css.map",
-    "main.86871a4a.js.map": "/khy_portfolio_2025/static/js/main.86871a4a.js.map",
+    "main.a6fa23d2.css.map": "/khy_portfolio_2025/static/css/main.a6fa23d2.css.map",
+    "main.ffc250c3.js.map": "/khy_portfolio_2025/static/js/main.ffc250c3.js.map",
     "453.bc85f8ef.chunk.js.map": "/khy_portfolio_2025/static/js/453.bc85f8ef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.75613282.css",
-    "static/js/main.86871a4a.js"
+    "static/css/main.a6fa23d2.css",
+    "static/js/main.ffc250c3.js"
   ]
 }

@@ -17,7 +17,7 @@ const projectData = [
   {
     title: "롯데월드 차세대 시스템 - 디지털 채널 부문 구축",
     img: Project_Img_01,
-    period: "2024.11.12 ~ 2025.06.13(약 8개월 : 프로젝트 진행중)​",
+    period: "2024.11.12 ~ 2025.06.30(약 8개월)​",
     role: "반응형 웹/앱 UI 개발, 재사용 컴포넌트 제작, 어드벤처 앱 메인, 롯데월드 민속박물관 메인 담당​",
     environment: "React, SCSS, Framer Motion, Git",
   },

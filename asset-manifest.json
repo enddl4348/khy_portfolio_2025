@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/khy_portfolio_2025/static/css/main.a6fa23d2.css",
-    "main.js": "/khy_portfolio_2025/static/js/main.ffc250c3.js",
+    "main.css": "/khy_portfolio_2025/static/css/main.de3f0490.css",
+    "main.js": "/khy_portfolio_2025/static/js/main.34fcedef.js",
     "static/js/453.bc85f8ef.chunk.js": "/khy_portfolio_2025/static/js/453.bc85f8ef.chunk.js",
     "static/media/img_about_bg.jpg": "/khy_portfolio_2025/static/media/img_about_bg.df54afda634b26f3680e.jpg",
     "static/media/logo_js.svg": "/khy_portfolio_2025/static/media/logo_js.5b07fb896a6838a8947be027f7e17188.svg",
@@ -23,6 +23,7 @@
     "static/media/img_about_responsible.jpg": "/khy_portfolio_2025/static/media/img_about_responsible.d82c8233d7bf0e4ad66b.jpg",
     "static/media/project_03.jpg": "/khy_portfolio_2025/static/media/project_03.50f413a4a04833809a86.jpg",
     "static/media/project_06.jpg": "/khy_portfolio_2025/static/media/project_06.56707580f58abe416eef.jpg",
+    "static/media/project_00.jpg": "/khy_portfolio_2025/static/media/project_00.6582a0e27dd5291b26a5.jpg",
     "static/media/img_about_persistent.jpg": "/khy_portfolio_2025/static/media/img_about_persistent.4f4feba0e1d70396af3b.jpg",
     "static/media/logo_html.svg": "/khy_portfolio_2025/static/media/logo_html.40ec9b007e8bd95172c86da665377690.svg",
     "static/media/logo_gsap.svg": "/khy_portfolio_2025/static/media/logo_gsap.8f0923398e932210b5cf9a099756b914.svg",
@@ -44,12 +45,12 @@
     "index.html": "/khy_portfolio_2025/index.html",
     "static/media/visual_circle_02.svg": "/khy_portfolio_2025/static/media/visual_circle_02.59ea60294461cfd76f09.svg",
     "static/media/visual_circle_01.svg": "/khy_portfolio_2025/static/media/visual_circle_01.594fa918dc2a8734e41e.svg",
-    "main.a6fa23d2.css.map": "/khy_portfolio_2025/static/css/main.a6fa23d2.css.map",
-    "main.ffc250c3.js.map": "/khy_portfolio_2025/static/js/main.ffc250c3.js.map",
+    "main.de3f0490.css.map": "/khy_portfolio_2025/static/css/main.de3f0490.css.map",
+    "main.34fcedef.js.map": "/khy_portfolio_2025/static/js/main.34fcedef.js.map",
     "453.bc85f8ef.chunk.js.map": "/khy_portfolio_2025/static/js/453.bc85f8ef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6fa23d2.css",
-    "static/js/main.ffc250c3.js"
+    "static/css/main.de3f0490.css",
+    "static/js/main.34fcedef.js"
   ]
 }

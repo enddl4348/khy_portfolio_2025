@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
 // img
+import Project_Img_00 from "../../assets/img/project_00.jpg";
 import Project_Img_01 from "../../assets/img/project_01.jpg";
 import Project_Img_02 from "../../assets/img/project_02.jpg";
 import Project_Img_03 from "../../assets/img/project_03.jpg";
@@ -14,6 +15,14 @@ import Project_Img_06 from "../../assets/img/project_06.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 const projectData = [
+  {
+    title: "KT - 소상공인통합플랫폼 ‘사장이지’",
+    img: Project_Img_00,
+    period: "2025.09.01 ~ 2025.11.30(3개월)​",
+    role: "React 기반 '사장이지' 앱 관리자 페이지 고도화 및 유지보수,​",
+    environment:
+      "React, Next.js, TypeScript, Tailwind CSS, Git, Jira, Confluence",
+  },
   {
     title: "롯데월드 차세대 시스템 - 디지털 채널 부문 구축",
     img: Project_Img_01,
@@ -105,7 +114,7 @@ export default function Section3() {
           </div>
           {projectData.map((item, index) => (
             <div key={index} className={`${project}__item`}>
-              <div className={`${project}-card ${project}-card--0${index + 1}`}>
+              <div className={`${project}-card ${project}-card--0${index}`}>
                 <div className={`${project}-card__img`}>
                   <img src={item.img} alt="" />
                   <div className={`${project}-card__hover`}>

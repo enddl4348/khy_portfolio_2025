@@ -424,6 +424,12 @@ $project: project;
         @include mix.font-style(1.8rem, 400);
       }
     }
+    &--00 {
+      background: linear-gradient(#fc475f, #f8435b);
+      .#{$project}-card__detail-item:first-of-type::before {
+        background-color: #fc475f;
+      }
+    }
     &--01 {
       background: linear-gradient(#f94349, #d61a2b);
       .#{$project}-card__detail-item:first-of-type::before {
